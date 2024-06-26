@@ -41,12 +41,18 @@ function scripts() {
 			module: {
 				rules: [
 					{
+						test: /\.css$/,
+						use: ['style-loader', 'css-loader']
+					},
+					{
 						test: /\.(js)$/,
 						exclude: /(node_modules)/,
-						loader: 'babel-loader',
-						options: {
-							presets: ['@babel/env'],
-							plugins: ['babel-plugin-root-import']
+						use: {
+							loader: 'babel-loader',
+							options: {
+								presets: ['@babel/env'],
+								plugins: ['babel-plugin-root-import']
+							}
 						}
 					}
 				]

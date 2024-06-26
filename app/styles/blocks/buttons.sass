@@ -1,0 +1,19 @@
+.button_one
+	width: gem(313)
+	height: gem(73)
+	border: 1px solid var(--color-white)
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&::after
+		content: ''
+		width: gem(74)
+		height: 1px
+		background: var(--color-white)
+		margin: 0 gem(22) 0 gem(11)
+	&.black
+		border: 1px solid var(--color-black)
+		&::after
+			background: var(--color-black)
+
+		

@@ -1,0 +1,37 @@
+.header
+    padding: gem(33) gem(117) gem(33) gem(29)
+    display: flex
+    position: absolute
+    top: 0
+    left: 0 
+    width: 100%
+    z-index: 10
+    &-logo
+        margin-right: gem(37)
+        width: gem(147)
+    &-buttons
+        display: flex
+        justify-content: space-between
+        width: 100%
+        &-nav, &-addition
+            margin-top: gem(14)
+            button
+                background: none
+                border: none
+                padding: 0
+                svg
+                    margin-left: gem(16)
+        &-nav
+            &-element
+                margin-right: gem(80)
+                &:last-child
+                    margin-right: 0
+        &-addition
+            display: flex
+            align-items: flex-start
+            &-element
+                margin-right: gem(42)
+                &:last-child
+                    margin-right: 0
+
+    
