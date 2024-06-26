@@ -1,0 +1,96 @@
+
+@import './variables'
+
+@mixin typography($color, $font-family, $font-size, $font-weight, $letter-spacing:0, $line-height: normal)
+	color: $color
+	font-family: $font-family
+	font-size: $font-size
+	font-weight: $font-weight
+	letter-spacing: $letter-spacing
+	line-height: $line-height
+
+@mixin mixed-lbl($args...)
+	@include typography($args...)
+
+// title h1
+@mixin title-h1
+	@include mixed-lbl(var(--color-white), var(--thin-font), var(--font-size-h1), var(--font-weight-2), var(--letter-spacing), var(--line-height-h1))
+
+// title h2
+@mixin title-h2
+	@include mixed-lbl(var(--color-white), var(--thin-font), var(--font-size-h2), var(--font-weight-2), var(--letter-spacing), var(--line-height-h2))
+
+// title h3
+@mixin title-h3
+	@include mixed-lbl(var(--color-white), var(--medium-font), var(--font-size-h3), var(--font-weight-5), var(--letter-spacing), var(--line-height-h3))
+
+// title h4
+@mixin title-h4
+	@include mixed-lbl(var(--color-white), var(--bold-font), var(--font-size-h4), var(--font-weight-7), var(--letter-spacing), var(--line-height-h4))
+
+// title h5
+@mixin title-h5
+	@include mixed-lbl(var(--color-white), var(--regular-font), var(--font-size-h5), var(--font-weight-4), var(--letter-spacing), var(--line-height-h5))
+
+// label1
+@mixin label-1
+	@include mixed-lbl(var(--color-white), var(--medium-font), var(--font-size-label1), var(--font-weight-5), var(--letter-spacing), var(--line-height-label-1))
+
+// label2
+@mixin label-2
+	@include mixed-lbl(var(--color-white), var(--regular-font), var(--font-size-label2), var(--font-weight-4), var(--letter-spacing), var(--line-height-label-2))
+
+// label3
+@mixin label-3
+	@include mixed-lbl(var(--color-white), var(--light-font), var(--font-size-label3), var(--font-weight-3), var(--letter-spacing), var(--line-height-label-3))
+
+// label4
+@mixin label-4
+	@include mixed-lbl(var(--color-white), var(--bold-font), var(--font-size-label4), var(--font-weight-7), var(--letter-spacing), var(--line-height-label-4))
+
+//desc-1
+@mixin desc-1
+	@include mixed-lbl(var(--color-white), var(--light-font), var(--font-size-desc1), var(--font-weight-3), var(--letter-spacing), var(--line-height-desc1))
+
+//desc-2
+@mixin desc-2
+	@include mixed-lbl(var(--color-white), var(--regular-font), var(--font-size-desc2), var(--font-weight-4), var(--letter-spacing), var(--line-height-desc2))
+
+//desc-3
+@mixin desc-3
+	@include mixed-lbl(var(--color-white), var(--light-font), var(--font-size-desc3), var(--font-weight-3), var(--letter-spacing), var(--line-height-desc3))
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, small, strong, ul, li, form, label,
+article, footer, header, nav, section, input, textarea, button
+	
+	&.center-text
+		text-align: center
+
+	&.left-text
+		text-align: left
+
+	&.right-text
+		text-align: right
+
+	&.cap-text
+		text-transform: capitalize
+
+	&.up-text
+		text-transform: uppercase
+
+	&.low-text
+		text-transform: lowercase
+
+	&.title-h1
+		@include title-h1
+
+	&.title-h2
+		@include title-h2
+
+	&.label-1
+		@include label-1
+
+	&.desc-1
+		@include desc-1
