@@ -1,7 +1,7 @@
 .button_one
 	width: gem(313)
 	height: gem(73)
-	border: 1px solid var(--color-white)
+	border: 1px solid var(--color-black)
 	display: flex
 	justify-content: flex-end
 	align-items: center
@@ -9,11 +9,20 @@
 		content: ''
 		width: gem(74)
 		height: 1px
-		background: var(--color-white)
+		background: var(--color-black)
 		margin: 0 gem(22) 0 gem(11)
-	&.black
-		border: 1px solid var(--color-black)
+	&.white
+		border: 1px solid var(--color-white)
 		&::after
-			background: var(--color-black)
+			background: var(--color-white)
 
+.button_two
+	display: flex
+	align-items: center
+	&::after
+		content: ''
+		width: gem(74)
+		height: 1px
+		background: var(--color-black)
+		margin: 0 gem(22) 0 gem(11)
 		

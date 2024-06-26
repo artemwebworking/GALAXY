@@ -1,0 +1,37 @@
+.news
+	background: #F4EFEC
+	&-main
+		padding: gem(79) 0 gem(74)
+		h2
+			margin-bottom: gem(69)
+		&-articles
+			display: flex
+			flex-direction: column
+			&-element
+				width: gem(748)
+				margin-bottom: gem(67)
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				&:last-child
+					margin-bottom: 0
+				h3
+					@include title-h4
+				p
+					margin: gem(15) 0 gem(25)
+					@include desc-2
+					max-width: gem(748)
+					max-height: calc( 0.22rem * 3 )
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					word-wrap: break-word
+		&-more
+			margin-top: gem(93)
+		&-img
+			width: gem(879)
+			position: absolute
+			top: 0
+			right: gem(195)
