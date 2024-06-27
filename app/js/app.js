@@ -40,10 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			event.preventDefault();
 			let phoneInputValue = phoneInput.value.trim();
 	
-			// Валидация телефонного номера
 			if (validatePhone(phoneInputValue)) {
-				// Успешная валидация
-				var form_data = $(this).serialize();
+				let form_data = $(this).serialize();
 				$.ajax({
 					type: 'POST',
 					url: './send.php',
@@ -62,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					}
 				});
 			} else {
-				// Ошибка валидации
 				console.log('Validation error');
 				phoneWrapper.classList.add('error');
 				formAnswer.classList.add('active');
@@ -76,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	
 		function validatePhone(phone) {
-			// Проверка на пустоту и формат номера
 			const re = /^\d+$/;
 			return re.test(phone);
 		}
