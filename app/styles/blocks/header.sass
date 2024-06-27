@@ -15,21 +15,47 @@
         width: 100%
         &-nav, &-addition
             margin-top: gem(14)
+            display: flex
             button
                 background: none
                 border: none
                 padding: 0
+                display: flex
+                align-items: center
                 svg
                     margin-left: gem(16)
         &-nav
+            svg
+                width: gem(20)
+                height: auto
             &-element
                 margin-right: gem(80)
+                &:nth-child(2)
+                    svg
+                        width: gem(14)
                 &:last-child
                     margin-right: 0
+            
         &-addition
             display: flex
             align-items: flex-start
+            svg
+                width: gem(20)
+                height: auto
             &-element
                 margin-right: gem(42)
-                &:last-child
-                    margin-right: 0
+                &:nth-child(2)
+                    svg
+                        width: gem(25)
+                &:nth-child(3)
+                    svg
+                        width: gem(25)
+                &:nth-child(4)
+                    svg
+                        width: gem(28)
+                &:nth-child(5)
+                    svg
+                        width: gem(29)
+                &:nth-child(6)
+                    svg
+                        width: gem(21)

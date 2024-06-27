@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function swiperSlider() {
 		new Swiper('.swiper', {
 			direction: 'horizontal',
-			loop: false,
+			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			clickable: true,

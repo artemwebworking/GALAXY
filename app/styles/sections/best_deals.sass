@@ -1,9 +1,195 @@
 .best_deals
 	&-main
-		padding: gem(137) 0 gem(128)
+		padding: gem(137) 0 0
 		&-title
 			display: flex
 			align-items: flex-end
 			width: 100%
 			justify-content: space-between
 			margin-bottom: gem(41)
+		&-goods
+			display: flex
+			justify-content: space-between
+			width: 100%
+			flex-wrap: wrap
+			&-element
+				width: gem(374)
+				position: relative
+				z-index: 1
+				padding-bottom: gem(180)
+				margin-bottom: gem(100)
+				&::before
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					width: gem(63)
+					height: gem(63)
+					background: url(../images/dist/best_deals-new.svg) no-repeat
+					background-size: 100% 100%
+					background-position: 100% 100%
+					z-index: 2
+				&:hover
+					.best_deals-like
+						opacity: 1
+					.best_deals-desc
+						border: 1px solid var(--color-gray)
+						width: gem(442)
+						z-index: 2
+						transform-origin: left
+					.best_deals-desc-colors
+						height: gem(64)
+					.best_deals-desc-bottom
+						height: gem(73)
+
+					
+	&-slider
+		position: relative
+		z-index: 1
+		&-control
+			width: 100%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			display: flex
+			justify-content: space-between
+			padding: 0 gem(11)
+			.swiper-button-prev, .swiper-button-next
+				color: var(--color-black)
+				&::after
+					font-size: gem(25)
+	&-like
+		position: absolute
+		right: gem(20)
+		top: gem(23)
+		z-index: 2
+		opacity: 0
+		display: flex
+		transition: all 0.3s ease
+		cursor: pointer
+		&-input
+			display: none
+		&-label 
+			display: flex
+			position: relative
+			width: gem(28)
+			height: gem(25)
+		&-heart 
+			position: absolute
+			top: 0
+			left: 0
+			width: gem(28)
+			height: gem(25)
+			background-color: transparent
+		.best_deals-like-input:checked + .best_deals-like-label .best_deals-like-heart
+			svg path
+				fill: #D00000
+	&-desc
+		border: 1px solid var(--color-white)
+		background: var(--color-white)
+		transition: 0.3s all ease
+		width: gem(374)
+		position: absolute
+		left: 50%
+		bottom: 0
+		transform: translate(-50%, 0%)
+		transform-origin: center
+		z-index: 2
+		&-colors
+			display: flex
+			align-items: center
+			padding-top: gem(24)
+			padding: 0 gem(33)
+			height: 0
+			overflow: hidden
+			transition: 0.3s all ease
+			&-element
+				width: gem(23)
+				height: gem(23)
+				margin-right: gem(14)
+				cursor: pointer
+				&:nth-child(1)
+					background: url(../images/dist/best_deals-color-01.svg) no-repeat
+					background-size: 100% 100%
+					background-position: 100% 100%
+				&:nth-child(2)
+					background: url(../images/dist/best_deals-color-02.svg) no-repeat
+					background-size: 100% 100%
+					background-position: 100% 100%
+				&:nth-child(3)
+					background: url(../images/dist/best_deals-color-03.svg) no-repeat
+					background-size: 100% 100%
+					background-position: 100% 100%
+				&:nth-child(4)
+					background: url(../images/dist/best_deals-color-04.svg) no-repeat
+					background-size: 100% 100%
+					background-position: 100% 100%
+				&:nth-child(5)
+					background: url(../images/dist/best_deals-color-05.svg) no-repeat
+					background-size: 100% 100%
+					background-position: 100% 100%
+				&:last-child
+					margin-right: 0
+		&-top
+			display: flex
+			width: 100%
+			justify-content: space-between
+			margin-bottom: gem(11)
+			padding: 0 gem(33)
+			&-stars
+				display: flex
+				align-items: center
+				i
+					width: gem(25)
+					height: gem(25)
+					margin-right: gem(5)
+					background: url(../images/dist/best_deals-blackstar.svg) no-repeat
+					background-size: 100% 100%
+					background-position: 100% 100%
+					&:last-child
+						margin-right: 0
+						background: url(../images/dist/best_deals-whitestar.svg) no-repeat
+						background-size: 100% 100%
+						background-position: 100% 100%
+			&-sizes
+				display: flex
+				&-element
+					font-family: "Montserrat-Regular"
+					font-size: gem(22)
+					line-height: gem(27)
+					margin-right: gem(10)
+					color: var(--color-gray)
+					cursor: pointer
+					&:last-child
+						margin-right: 0
+					&.active
+						font-family: "Montserrat-Medium"
+						font-size: gem(22)
+						line-height: gem(27)
+						color: var(--color-black)
+						pointer-events: none
+		h4
+			margin-bottom: gem(25)
+			@include desc-2
+			padding: 0 gem(33)
+		p
+			@include label-4
+			margin-bottom: gem(35)
+			padding: 0 gem(33)
+		&-bottom
+			width: 100%
+			height: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			background: var(--color-black)
+			transition: all 0.3s ease
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				height: 100%
+				font-size: gem(18)
+				letter-spacing: var(--letter-spacing-1)
