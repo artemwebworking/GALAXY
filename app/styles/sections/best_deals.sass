@@ -40,9 +40,9 @@
 						transform-origin: left
 					.best_deals-desc-colors
 						height: gem(64)
-					.best_deals-desc-bottom
+					.best_deals-desc-button
 						height: gem(73)	
-					.best_deals-slider-control
+					.swiper-button-prev, .swiper-button-next
 						opacity: 1
 						pointer-events: unset
 						cursor: pointer
@@ -52,22 +52,13 @@
 		width: gem(374)
 		img
 			width: 100%
-		&-control
-			width: 100%
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-			display: flex
-			justify-content: space-between
-			padding: 0 gem(11)
+		.swiper-button-prev, .swiper-button-next
+			color: var(--color-black)
 			opacity: 0
-			pointer-events: unset
-			transition: 0.3s all ease
-			.swiper-button-prev, .swiper-button-next
-				color: var(--color-black)
-				&::after
-					font-size: gem(25)
+			pointer-events: none
+			transition: all 0.3s ease
+			&::after
+				font-size: gem(25)
 	&-like
 		position: absolute
 		right: gem(20)
@@ -171,7 +162,7 @@
 			@include label-4
 			margin-bottom: gem(35)
 			padding: 0 gem(33)
-		&-bottom
+		&-button
 			width: 100%
 			height: 0
 			display: flex
@@ -179,11 +170,18 @@
 			align-items: center
 			background: var(--color-black)
 			transition: all 0.3s ease
-			a
-				display: flex
-				justify-content: center
-				align-items: center
-				width: 100%
-				height: 100%
-				font-size: gem(18)
-				letter-spacing: var(--letter-spacing-1)
+			@include label-4
+			font-size: gem(18)
+			letter-spacing: var(--letter-spacing-1)
+			color: var(--color-white)
+			overflow: hidden
+			border: none
+			padding: 0
+			// button
+			// 	display: flex
+			// 	justify-content: center
+			// 	align-items: center
+			// 	width: 100%
+			// 	height: 100%
+			// 	font-size: gem(18)
+			// 	letter-spacing: var(--letter-spacing-1)
