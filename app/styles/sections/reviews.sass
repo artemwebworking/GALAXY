@@ -1,3 +1,51 @@
 .reviews
-    &-main
-        padding: gem(85) 0 gem(100)
+	&-main
+		padding: gem(85) 0 gem(100)
+		h2
+			margin-bottom: gem(69)
+		&-comments
+			display: flex
+			width: 100%
+			justify-content: space-between
+			&-element
+				width: gem(748)
+				&-title
+					margin-bottom: gem(15)
+					div
+						display: flex
+						align-items: center
+						margin-bottom: gem(10)
+						i
+							width: gem(25)
+							height: gem(25)
+							margin-right: gem(5)
+							background: url(../images/dist/best_deals-blackstar.svg) no-repeat
+							background-size: 100% 100%
+							background-position: 100% 100%
+					h4
+						@include title-h4
+				p
+					@include desc-2
+					max-width: gem(748)
+					max-height: calc( 0.22rem * 3 )
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					word-wrap: break-word
+				time
+					@include desc-2
+					margin-top: gem(25)
+		&-more
+			margin-top: gem(57)
+		&-info
+			margin-top: gem(94)
+			p
+				margin-bottom: gem(20)
+				&:last-child
+					margin-bottom: 0
+				a
+					font-size: gem(16)
+					letter-spacing: var(--letter-spacing-1)
+						
