@@ -1,0 +1,76 @@
+.subscribe
+    background: #F6F6F6
+    &-main
+        display: flex
+        width: 100%
+        justify-content: space-between
+        padding: gem(49) 0 gem(57)
+        h3
+            margin-bottom: gem(40)
+            text-align: center
+            letter-spacing: var(--letter-spacing-1)
+        &-form
+            display: flex
+            flex-direction: column
+            width: gem(615)
+            align-items: center
+            form
+                position: relative
+            &-input
+                position: relative
+                margin-bottom: gem(32)
+                input
+                    width: gem(453)
+                    height: gem(73)
+                    border: 1px solid #BFBFBF
+                    padding: 0 gem(66)
+                    &:focus
+                        outline: none
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    left: gem(30)
+                    top: 50%
+                    transform: translate(0%, -50%)
+                    width: gem(24)
+                    height: gem(24)
+                    background: url(../images/dist/subscribe-phone.svg) no-repeat
+                    background-position: 100% 100%
+                    background-size: 100% 100%
+            &-submit
+                width: gem(453)
+                height: gem(73)
+                display: flex
+                justify-content: center
+                align-items: center
+                background: var(--color-black)
+                border: none
+                padding: 0
+            .subscribe-main-form-submit
+                font-size: gem(18)
+            &-answer
+                position: absolute
+                top: gem(-30)
+                left: 0
+                @include desc-1
+        &-soc
+            display: flex
+            flex-direction: column
+            width: gem(684)
+            align-items: center
+            h3
+                margin-bottom: gem(81)
+            &-links
+                display: flex
+                align-items: center
+                span
+                    width: 2px
+                    height: 100%
+                    background: #878787
+                    margin: 0 gem(67)
+                a
+                    margin-right: gem(60)
+                    &:nth-child(3), &:last-child
+                        margin-right: 0
+                    

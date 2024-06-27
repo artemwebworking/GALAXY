@@ -1,0 +1,104 @@
+.footer
+    &-main
+        width: 100%
+        background: url(../images/dist/footer-bgr-01.webp) no-repeat
+        background-position: 100% 100%
+        background-size: 100% 100%
+        padding: gem(200) gem(120) gem(120)
+        display: flex
+        justify-content: center
+        position: relative
+        &-logo
+            position: absolute
+            top: gem(202)
+            left: gem(122)
+        &-pages
+            display: flex
+            &-group
+                display: flex
+                flex-wrap: wrap
+                width: gem(421)
+                h3
+                    margin-bottom: gem(27)
+                    width: 100%
+                nav 
+                    display: flex
+                    width: 100%
+                ul
+                    display: flex
+                    flex-direction: column
+                    margin-right: gem(30)
+                    width: 50%
+                    &:last-child
+                        margin-right: 0
+                    li
+                        margin-bottom: gem(10)
+                        a
+                            opacity: .75
+        &-contacts
+            position: absolute
+            top: gem(187)
+            right: gem(116)
+            &-tel
+                display: flex
+                flex-direction: column
+                margin-bottom: gem(40)
+                data
+                    @include desc-1
+                    color: var(--color-white)
+                    font-size: gem(30)
+                    margin-bottom: gem(20)
+                    &:last-child
+                        margin-bottom: 0
+            &-soc
+                display: flex
+                align-items: center
+                width: gem(295)
+                justify-content: space-between
+                span
+                    width: 2px
+                    height: gem(28)
+                    background: #C4C4C4
+    &-copyright
+        width: 100%
+        background: #333333
+        height: gem(106)
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        padding: 0 gem(117)
+        &-links
+            margin-left: gem(50)
+            display: flex
+            align-items: center
+            span
+                display: flex
+                width: 1px
+                height: gem(16)
+                margin: 0 gem(10)
+                background: rgba(255, 255, 255, 0.25)
+            a
+                border-bottom: 1px dashed rgba(255, 255, 255, 0.25)
+        .desc-1
+            color: var(--color-white)
+            opacity: .25
+            font-size: gem(14)
+        &-logo
+            display: flex
+            align-items: center
+            position: absolute
+            top: 50%
+            right: gem(117)
+            transform: translate(0%, -50%)
+            &::after
+                content: ''
+                display: block
+                width: gem(91)
+                height: gem(36)
+                background: url(../images/dist/footer-galaxy.svg) no-repeat
+                background-position: 100% 100%
+                background-size: 100% 100%
+                margin-left: gem(20)
+                        
+
